@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
-# 厦门GDG小助手微信机器人，功能：
+# 郑州GDG小助手微信机器人，功能：
 # 1.自动接受好友，并根据消息自动将朋友加群
 # 2.为避免超过消息限额，采用了队列，并随机延迟消息处理的机制
-# @Author Lingxiang Zheng, email:lxzheng@gmail.com
+# @Author 脉脉不得语, email:inferjay@gmail.com
 
 from wxpy import *
 import os
@@ -14,15 +14,15 @@ import threading
 import Queue
 
 #小助手为群主，负责管理的群
-OWN_GROUP = u'GDG_厦门'
+OWN_GROUP = u'郑州GDG'
 #接受管理指令的群
 ADMIN_GROUP = u'管理群名称'
 #转发的微信公众号
 FW_MPS = u'谷歌'
 #加好友欢迎消息
-WELCOME_MSG = u'哈哈，我接受了你的好友请求,我是厦门GDG小助手机器人，回复"I love GDG"可以帮你加入厦门GDG群'
+WELCOME_MSG = u'哈哈，我接受了你的好友请求,我是郑州 GDG 小助手机器人，回复"I love GDG"可以帮你加入郑州 GDG 微信群'
 #默认回复消息
-DEFAULT_MSG = u'Hello {} ，回复"I love GDG"可以帮你加入厦门GDG群'
+DEFAULT_MSG = u'Hello {} ，回复"I love GDG"可以帮你加入郑州 GDG 微信群'
 #加群关键字(小写)
 VALID_KEY="i love gdg"
 #命令
